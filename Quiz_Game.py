@@ -16,7 +16,7 @@ playing = input ('do you want to play? ' )
 # In[ ]:
 
 
-if playing.lower == 'yes':
+if playing.lower() == 'yes':
     print ("Great, let's play")
 else:
     print ('woops, okay')
@@ -50,7 +50,7 @@ question = input ('Who is the richest man in the world as at january 2022? ')
 # In[ ]:
 
 
-if question.lower == 'Elon musk':
+if question.lower() == 'Elon musk':
     print ('that is correct')
     score += 1
 else:
@@ -66,7 +66,7 @@ question = input ('Who is the current president in the United States of America?
 # In[ ]:
 
 
-if question.lower == 'Joe Biden':
+if question.lower() == 'Joe Biden':
     print ('that is the correct answer')
     score += 1
 else:
@@ -82,7 +82,7 @@ question = input ('Who is the highest scoring footballer of all time in the Engl
 # In[ ]:
 
 
-if question == 'Alan Shearer':
+if question.lower() == 'Alan Shearer':
     print ('correct')
     score += 1
 else:
