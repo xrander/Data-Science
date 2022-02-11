@@ -6,3 +6,6 @@ I tried implementing, an option to choose the number from 1 to 10, but seems una
 
 ## Password
 importing the random module of python, to randomly combine integers, symbols, and strings (alpha) to create a password of length 10
+
+# Rock Paper Scissors
+games recently added
