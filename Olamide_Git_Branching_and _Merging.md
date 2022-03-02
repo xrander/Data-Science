@@ -1,0 +1,19 @@
+#### 1.  Create a New Repository on Github
+ A new repository was created by me (xrander) <br>
+
+#### 2. Add a collaborator to your repository <br>
+I added two collaborators @harini and @shakiba
+
+#### 3. Each member make their own branch and create a random file and work on it <br>
+- A new branch hotfix was created
+- A new file olamide.txt was added to the branch
+- The new file was edited
+![screenshot](https://lh3.googleusercontent.com/JHjo4I-2ONqsnlZ9c6BF79EQEH3RJZINLHuzLnRzjQ4SIF3Wx4aSxv5EgVxaIN0sTxG2wtXbYhLlEQ0iyq6j_xfvmOqH_s6Q9tzyLnBBcZjbIyjsb-QIxqtz3_l9a2T5ZiLqdYrdvR2XY6hCeLShlhTuZnfjDpcKtfR0ZFGuXV3HCH3N3hwDKsCSxG95ASDGq6m_1EmCaR3A-NXVnU0gWaOmVbXa790QU5HFb61SIYkdUcOpFCB9r_2ohOIk0NdrKMtKsGqeJ_cunjIHlxlqEmNo8PT-hHna-PfCXN5ymvMwr6Zl708nzr48QXuWk-O15YxvDMBvN4onCNknBa2dP4cEjP7ajFsv88XXXSGrUY4ytTy4slwAmvmeKAkyRo0ER-WFRqXedWGJlvk5nClPB6zR8DFWxeoVRcGaKDP2BoaUkcvJmfRdAJQ9WxFrm-iY4KSIteMOjEVpN7XXVztZPMhkR6ADWJU2l1lXKqyBQAWhdbmbUNeyjVSK5Lvea-nLzhqifdmZAkrergZHw2Bkys2A6NZ6wUTzLvY4hJnbTze19QApZjCCqDtvdvaVfxNY30bSVkPkwxmx1tSUwtgYCBUedjApMYcYki3MC5NxLrGwjyPV4nNVrqXoVb7Z5dzkcJivjztKpK5ms8j16ngHd1k1DYxyeJAVDwe76gf0OheFBbUmdezXk8PzBQnUGyO2TUk7eZ2jgwNr7EuKrmFpE-0=w742-h331-no?authuser=0)
+
+#### 4. Try to merge the brach to the master by each member <br>
+The hotfix branch was merge into the master and was pushed to the remote repository
+![image](https://lh3.googleusercontent.com/aNjkhUa422SJdTWPxpTZ3PBMeVzqMmQWP6s8_ySmf8eRxiyyXs4aJMBoj6gSE8nJe-O79bPD1WbMWNo6ieD34DhndJ4av_U9zmfw1PW5IPDsP6YVjB8UdoHZsI-vfCPhRlrEgMIcJprW05TPHyWdIaw8OXOnoaRG0VwAJnoN-JE4wNtrDJS6KDJFDunRPJS6eks2d7ljFc4yi9d1Mi_Iv5tqHGQT1yA7_VRTL9e4K-dpy2bvO1AZKw4Rr6026FNYb2N9dmP-8AWLq4ycHl8kcwEj64ObLLDIKxFn-D96OE5D-i8-u_AkHMVo3NTYwxSMhs9-aCrFd9U5pFvbUTTefGgDuZ8PorQzfuaB6p-IBGfzkkuv6j8s2WJ0FYn3MGBmMsAOObC5TjzmExnUVZdsfPIAA0lKOLq7MJKQPbtVlWK5E99VGqt-aFETuxQx5amBV0q-_vSbzyEBgyFJbe2PotCyHAQ4WayRbuG115NmQc2SwmEGo0qgK2e3QPLVL9UvbmTnE8no9dxp0iexBuMVKw3cD547xNtGV6g8HYNLs4RR-skQ7INj7NHlqBc9KNN_39ly7SYUvXOq4SEUFeBsjdaSIA1toeoqAxJoyu5qhO2q4XExXpUFF0rBEQMlPxBOt7KbGwMAE91qwz3vfgcOQ2Z21oqDYZ-axql39jXIWx5c5n_1Wyf9ZvTqqTj24EDxUUTk6kLC4S6gVweRvQezdkE=w729-h572-no?authuser=0)
+
+### 5. Create the same file in all the branches and try to merge it to master also try to edit the same file by all the team member and try to push it.<br>
+A common file harini.txt was created in my branch 'hotfix' and merge to the master.
+![image](https://lh3.googleusercontent.com/rqFJl-P0VD5sbB7YRUfe6rKdTUyk9Jb-CUbhyBNLfcwXfQMazviO7XpSFNhjJWrQzV5Tdp5U9Vb_f9sW7o4FKj4pMliZK3lJfwgNNNp87tEg0BMgcmsJt4qjy969YIxJFnxiPsgTCAN9YtCrz12h1nQpdr4DGizCxEvbxW7-DQ_srJros7rXDPr2qtaYH6nhd1ajJqkZFrIumCGZzBSW0KhCsuWOJSdbmZXnxzAtztYf68AXMs2SkrMYk0jPi0Xw5DzmNKYCsmZwNssu_d8GJ0zYBid7Tc074_drG4XAQ3PfWSJG1dQa9zxi_d1HSSFl4mfab8YToHjv8-m1_8L5lBwXQ-lVWA5VjADMwLjKp2WmMlb4azw4RnlSUGl1xcBlp3YqKEDkBmP6pac-DM2ZRdFMAxthFir5sloCxlIagAt_WBEvboD_NVjUqDnfA2p09JcSTCXz7P9jvigL9PorVIjUDx4Wsq81-bsRdDNaBy6vw2JqhC-ibCJ26l2HMa7dDwomlWX7DYiiqG_-TBUNFKfjtc3P5fa7CqdIs213oTp2MJcW7KiR9G--6tl3uYCHSsRL3nCaJwBWQ_sX926ELk0VcKzwHuIw_kTQJELSy7TXk6BM_cbZGlOQOZI_giIxQI0BreYSUlPIVIfKtaV69mrnpbTlVMcz5tPhCNj5ULbbLVEHHWQXHkgzShajIiaVYrSXNRXhf9mC_yVkmUD9wLI=w731-h671-no?authuser=0)
