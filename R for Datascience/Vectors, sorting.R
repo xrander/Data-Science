@@ -29,10 +29,14 @@ order(f)
 x <- c(10,5,15,29)
 index <- order(x)
 order(x)
+
+library(dslabs)
+data(murders)
 #max() is used to get the highest while which.max() gives the index og the highest
 #min can be used fot the same
 #rank() for any given list, it gives a vector of rank, it is similar to using index
-```'> murders$population
+'
+> murders$population
 [1]  4779736   710231  6392017  2915918 37253956  5029196  3574097
 [8]   897934   601723 19687653  9920000  1360301  1567582 12830632
 [15]  6483802  3046355  2853118  4339367  4533372  1328361  5773552
@@ -49,5 +53,21 @@ order(x)
 > min(min_pop)
 [1] 1
 > min_pop[1]
-[1] 51''''
-``
+[1] 51
+'
+murders$state[which.max(murders$population)]
+pop_index = order(murders$population)
+df_states <- data.frame(name = murders$state[pop_index], population = murders$population[pop_index], total = murders$total[pop_index])
+df_states
+murders
+
+# Vector Arithmethics
+# getting the murder rate in the US
+murder_rate <- murders$total/murders$population * 100000
+murder_rate
+#ordering states according to their murder rate
+murders$state[order(murder_rate,decreasing = TRUE)]
+#data frame with murder rate per 100000 with compared to population total
+df_mr <- data.frame(state = murders$state[order(murder_rate)], population = murders$population[order(murder_rate)], rate = murder_rate)
+df_mr
+mean(murder_rate)
