@@ -59,6 +59,4 @@ murders %>% arrange(region, state)
 #top_n function
 murders%>%top_n(10,rate)
 murders %>% arrange(desc(rate)) %>% top_n(10, rate)
-
-
-NHANES %>% filter(AgeDecade == '40-49', Gender == 'male') %>% group_by(Race1) %>% summarize(average = mean(BPSysAve, na.rm = TRUE), standard_deviation = sd(BPSysAve, na.rm = TRUE)) %>% arrange(average)
+library(data.table)
