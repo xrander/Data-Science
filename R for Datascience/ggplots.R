@@ -16,3 +16,33 @@ print(m)
 library(ggthemes)
 library(ggrepel)
 m + theme_economist()
+library(dslabs)
+data("gapminder")
+head(gapminder)
+tail(gapminder)
+#to get the mortality rate of two countries from gapminder data
+gapminder %>% filter(year== 2011 & country %in% c('Nigeria', 'Ghana')) %>% select(country, infant_mortality)
+gapminder %>% filter(year == 2010) %>%ggplot(aes(fertility, life_expectancy, color = continent)) + 
+  geom_point()
+#faceting
+# comparing across continents and across select years
+gapminder %>% filter(year%in% c(2005, 2010, 2015)) %>%ggplot(aes(fertility, life_expectancy, color = continent))+
+  geom_point() + facet_grid(continent~ year)+ ggtitle ('Comparison of continents Life expentancy and fertility of 5 years interval from 2005 to 2015')
+#to have a viewable dimension, we use facet_wrap()
+#comparing across all continents across specific years
+gapminder %>% filter(year%in% c(1995, 2000, 2005, 2010, 2015)) %>%ggplot(aes(fertility, life_expectancy, color = continent))+
+  geom_point() + facet_wrap(.~ year) + ggtitle('Life expentancy and fertility of 5 years interval from 2005 to 2015')
+#TIME SERIES PLOT
+gapminder %>% filter (country == 'Denmark') %>% ggplot(aes(x=year,y= fertility)) +
+  geom_line()
+#for two countries
+gapminder %>% filter (country == c('Denmark','Nigeria')) %>% ggplot(aes(x=year,y= fertility, color = country)) +
+  geom_line()
+#Adding labels to the map
+countries <- c('South Korea', 'Germany')
+labels <- data.frame(country = countries, x = c(1975, 1965), y = c(60, 72))
+gapminder %>% filter(country %in% countries) %>%
+  ggplot(aes(year, life_expectancy, col = country)) +
+  geom_line() +
+  geom_text(data = labels, aes(x, y, label = country), size = 5) +
+  theme(legend.position = "none")
