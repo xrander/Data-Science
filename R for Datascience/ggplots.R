@@ -46,3 +46,20 @@ gapminder %>% filter(country %in% countries) %>%
   geom_line() +
   geom_text(data = labels, aes(x, y, label = country), size = 5) +
   theme(legend.position = "none")
+#Gapminder GDP Transformation
+gapminder <- gapminder %>% mutate(dollars_per_day = gdp/population/365)
+gapminder %>% filter(year == 2010 & !is.na(gdp)) %>% ggplot(aes(dollars_per_day)) +
+   geom_histogram(binwidth = 1, color = 'green')
+#transforming into log2
+gapminder %>% filter(year == 2010 & !is.na(gdp)) %>% ggplot(aes(log2(dollars_per_day))) +
+  geom_histogram(binwidth = 1, color = 'green')
+#boxplot and stratification
+length(levels(gapminder$region))
+m <- gapminder %>% filter(dollars_per_day & !is.na(dollars_per_day), region %in% c('Eastern Africa', 'Western Africa', 'Northern Africa', 'Southern Africa'))
+m
+m %>% ggplot(aes(region, dollars_per_day)) + geom_boxplot()
+gapminder %>% filter(year == 2010 & !is.na(gdp)) %>%  mutate(region = reorder(region,dollars_per_day, FUN = median)) %>%  ggplot(aes(region, dollars_per_day, fill = continent)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  xlab('') +
+  scale_y_continuous(trans='log2')
