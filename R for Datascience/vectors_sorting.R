@@ -1,25 +1,31 @@
 codes <- c(234, 45, 49)
 countries <- c('nigeria', 'denmark', 'germany')
+
 # we can use the names() function to assign names to entries of a vector
 names(codes) <- countries
 countries
 codes
+
 #seq can be used like range in python
 seq(1,10)
 1:10
 codes[3]
 codes[c(1,3)]
 codes[c(1:3)]
+
 #as.character and as.numeric functions as str() and int() in python
 #the : operator helps us to create a sequence of numbers
 #length.out argument lets us generate sequences that are increasing
 #by the same amount but are of the prespecified lenght
+
 x <- seq(0,100, length.out =5)
 #it's similar to creating multiples of x, as it can sometimes spread a number
 #out within the length.out to the last figure
+
 #to create an integer class in R we add an L in front of the number
 y <- 3L
 y
+
 #sort() sorts vector in increasing order.
 #order() takes a vector and sorts it according to the indices of the vector
 f <- c(100:10)
@@ -31,6 +37,7 @@ index <- order(x)
 order(x)
 
 library(dslabs)
+library(dplyr)
 data(murders)
 #max() is used to get the highest while which.max() gives the index og the highest
 #min can be used fot the same
@@ -62,11 +69,14 @@ df_states
 murders
 
 # Vector Arithmethics
+
 # getting the murder rate in the US
 murder_rate <- murders$total/murders$population * 100000
 murder_rate
+
 #ordering states according to their murder rate
 murders$state[order(murder_rate,decreasing = TRUE)]
+
 #data frame with murder rate per 100000 with compared to population total
 df_mr <- data.frame(state = murders$state[order(murder_rate)], population = murders$population[order(murder_rate)], rate = murder_rate)
 df_mr
