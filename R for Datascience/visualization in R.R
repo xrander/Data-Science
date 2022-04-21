@@ -2,27 +2,34 @@ library(tidyverse)
 library(dslabs)
 data(heights)
 prop.table(table(heights$sex))
+
 #a <- seq(min(my_data), max(my_data), length = 100) formular for cdf
-#cdffunction <- function(x){
-#mean(my_data <=x)
+
+'cdffunction <- function(x){
+mean(my_data <=x)'
+
 #} to compute the probability for a single value
 #cdf_values <- sapply(Aa, cdffunction)
 #plot (a, cdf_values)
 
-library(dslabs)
 data(heights)
 male <- heights$height[heights$sex=="Male"]
 female <- heights$height[heights$sex=="Female"]
+
+#Male and Female Percentiles
 female_percentiles <- quantile(female, c(0.1, 0.3, 0.5, 0.7, 0.9))
 male_percentiles <- quantile(male, c(0.1, 0.3, 0.5, 0.7, 0.9))
+
 df <- data.frame(male = male_percentiles, female = female_percentiles)
-df
+
+#printing new dataframe
 
 female_percentiles <- quantile(female, c(0.1, 0.3, 0.5, 0.7, 0.9))
 male_percentiles <- quantile(male, c(0.1, 0.3, 0.5, 0.7, 0.9))
 male
 mean(male)
 sd(male)
+
 #obtaining standard unit
 #standard units describe the number of standard deviations an observation is from the mean
 #it's denoted by Z. Z are useful for evaluating whether an observation is average or extreme.
@@ -68,7 +75,9 @@ percentiles <- quantile(heights$height, p)
 percentiles[names(percentiles) == '10%']
 percentiles[names(percentiles) == '35%']
 
+
 #FINDING QUANTILES WITH QNORM()
+
 #QNORM
 #the qnorm() gives the theoretical value of a quantile with probabity *p* of 
 # observing a value equal to or less than the quantile value given a normal 
@@ -76,6 +85,7 @@ percentiles[names(percentiles) == '35%']
 # qnorm(p, mean, sd)
 #by default, sd = 1 and mean = 0, and when qnorm() is called with no arguments
 # we get the quantiles for the standard normal distribution
+
 #RELATION TO PNORM
 # pnorm() gives the probability that a value from a standard normal distribution
 # will be less than or equal to a z-score value
@@ -91,4 +101,3 @@ observed_quantiles <- quantile(x,p)
 throretical_quantiles <- qnorm (p, mean = mean(x), sd = sd(x))
 plot(throretical_quantiles, observed_quantiles)
 abline(0,1)
-

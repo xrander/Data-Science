@@ -1,11 +1,16 @@
 #using logical operators to index vectors
 library(dslabs)
+library(dplyr)
 data(murders)
+
+#defining murder_rate per 100000 persons
 murder_rate <- murders$total/murders$population * 100000
 index <- murder_rate <= 0.71
 index
+
 #we can count the number of true using the code line below
 sum(index)
+
 #To get the states which are true
 safe <- murders$state[index]
 safe
