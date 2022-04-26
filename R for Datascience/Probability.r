@@ -28,3 +28,13 @@ prop.table(table(events))
 # using the replicate() function
 
 # SETTING RANDOM SEED
+set.seed(1986)
+
+#using mean() in probability
+beads <- rep(c('yellow', 'blue'), times = c(4,6))
+
+#printing variable
+beads
+#To find the probability of drawing a yellow, we can use the mean()
+mean(beads == 'yellow')
+
