@@ -1,3 +1,6 @@
+install.packages(gtools)
+library(gtools)
+
 options(digits = 3)
 
 # Probability
@@ -28,3 +31,38 @@ prop.table(table(events))
 # using the replicate() function
 
 # SETTING RANDOM SEED
+set.seed(1986)
+
+#using mean() in probability
+beads <- rep(c('yellow', 'blue'), times = c(4,6))
+
+#printing variable
+beads
+#To find the probability of drawing a yellow, we can use the mean()
+mean(beads == 'yellow')
+
+#simple probability exercise
+box <- rep(c('Cyan', 'Magenta', 'Yellow'), times = c(3,5,7))
+
+#The probability of choosing a cyan ball
+mean(box == 'Cyan')
+
+#The probability of choosing a cyan ball at first draw and not choosing choosing
+# a cyan ball at the second draw without replacement
+mean(box == 'Cyan') * (1 - 2/14)
+
+#The probability of choosing a cyan ball at first draw and not choosing choosing
+# a cyan ball at the second draw with replacement
+mean(box == 'Cyan') * (1 - mean(box == 'Cyan'))
+
+#Combination and Permutation
+#Generating decks of cards
+suits <- c('Diamonds', 'Clubs', 'Hearts', 'Spades')
+numbers <- c('Ace', 'Deuce', 'Three', 'Four', 'Five','Six','Seven',
+             'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King')
+deck <- expand.grid(number=numbers, suit=suits)
+deck <- paste(deck$number, deck$suit)                       
+
+#Probability for kings
+kings <- paste('King', suits)
+mean(deck %in% kings)
