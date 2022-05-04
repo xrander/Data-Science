@@ -117,3 +117,50 @@ mc <- replicate(R, {
     (hand[2] %in%aces & hand[1] %in% facecard)
   })
 mean(mc)
+
+n <- 50
+bdays <- sample(1:365, n, replace = TRUE)
+any(duplicated(bdays))
+r <- 10000
+results <- replicate(r,{
+  bdays <- sample(1:365, n, replace = TRUE)
+  any(duplicated(bdays))
+})
+mean(results)
+
+
+#Sapply
+
+compute_prob <- function(n, r = 10000){
+  sameday <- replicate(r,{
+    bdays <- sample(1:365,n, replace=TRUE)
+    any(duplicated(TRUE))
+  })
+  mean(sameday)
+}
+
+n <- seq(1:60)
+
+
+prob <- sapply(n, compute_prob)
+plot(n, prob)
+
+exact_prob <- function(n){
+  prob_unique <- seq(365, 365-n+1)/365
+  1-prod(prob_unique)
+}
+ex_prob <- sapply(n, exact_prob)
+
+#number of experiment s needed for a monte carlo simulation
+B <- 10^seq(1, 5, len = 100)    # defines vector of many B values
+compute_prob <- function(B, n = 22){    # function to run Monte Carlo simulation with each B
+  same_day <- replicate(B, {
+    bdays <- sample(1:365, n, replace = TRUE)
+    any(duplicated(bdays))
+  })
+  mean(same_day)
+}
+
+prob <- sapply(B, compute_prob)    # apply compute_prob to many values of B
+plot(log10(B), prob, type = "l")    # plot a line graph of estimates 
+
