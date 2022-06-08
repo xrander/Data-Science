@@ -22,7 +22,9 @@ murders[, .(state, region)] |> head()
 
 murders[, rate :=total/population *100000] |> head()
 
-#for multiple columns, ":=" is used data.table is designed to avoid memory wastage
+#for multiple columns, 
+#":=" is used data.table is designed to avoid memory wastage
+
 murders[, ":="(rate = total/population * 10^5, rank = rank(population))] |> head()
 #changes in data.table is usually referenced between a xy relation copy() is used to actually create a new copy
 
