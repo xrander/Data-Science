@@ -15,6 +15,9 @@ library(dslabs)
 library(dplyr)
 data(murders)
 
+#previewing data
+head(murders)
+
 murder_rate <- murders$total/murders$population *10^5
 ind <- which.min(murder_rate)
 
@@ -33,6 +36,7 @@ no_nas <- ifelse(is.na(na_example), 0, na_example)
 #this means if its NA in the na_example, return 0, else, return the value of na_example
 
 #any works like or while all works like and
+
 
 
 
