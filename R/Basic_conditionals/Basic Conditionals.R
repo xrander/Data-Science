@@ -39,14 +39,13 @@ no_nas <- ifelse(is.na(na_example), 0, na_example)
 
 
 
-
 #functions
 avg <- function(x){
   s<- sum(x)
   l<- length(x)
   s/l
 }
-x <- 1:10
+x <- 1:20
 avg(x)
 
 
@@ -88,3 +87,4 @@ y
 }
 
 inches_to_ft(144)
+
