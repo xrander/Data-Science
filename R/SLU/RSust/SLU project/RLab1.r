@@ -64,11 +64,15 @@ pop$hd <- pop$height/pop$dia
 #getting the mean height to diameter ratio
 mean(pop$hd)
 
+plcol<- c(20,10)
+pchdata <- c(15, 16)
+
 #plotting a simple graph of height vs diameter
 plot(pop$dia, pop$height,
-     text(x=0.9, y=300, labels = "Relation between height and diameter",col = "red", cex = 0.9),
+     text(x=01.2, y=500,labels = "Growth rate of fertilized and unfertilized seedlings",col = "red", cex = 0.9),
      xlim = c(0,5.5), ylim = c(0, 600),xlab = 'diameter(mm)',
-     ylab = 'Height(mm)', main = "Height vs Diameter",
-     pch = 19, col = 'green', )
+     ylab = 'Height(mm)', main = "Olamide Adu",
+     pch = pchdata, col = plcol) +
+  legend("topright", legend = c("Control","Fertilized"), pch= pchdata, col = plcol)
 
-
+     
