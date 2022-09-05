@@ -1,6 +1,7 @@
 #importing the dataframe from user directory and it is assigned to the pop
 
-pop <- read.table("C:/Users/aduol/Documents/Data Science/Data-Science/R/SLU/RSust/SLU project/Data/popdata.txt", header = T, sep = "\t", na.strings = "NA", dec = ".", strip.white = T)
+pop <- read.table("C:/Users/aduol/Documents/Data Science/Data-Science/R/SLU/RSust/SLU project/Data/popdata.txt",
+                  header = T, sep = "\t", na.strings = "NA", dec = ".", strip.white = T)
 
 #printing the first six and last five of the dataframe
 
